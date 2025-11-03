@@ -53,9 +53,9 @@ for x in xs:
     ys3.append(count)
 
 # Reversed to stop overlap
-plt.bar(xs, ys3, label = "Third-Order")
-plt.bar(xs, ys2, label = "Second-Order")
-plt.bar(xs, ys1, label = "First-Order")
+plt.bar([x + 0.25 for x in xs], ys3, width = 0.25, label = "Third-Order")
+plt.bar(xs, ys2, width = 0.25, label = "Second-Order")
+plt.bar([x - 0.25 for x in xs], ys1, width = 0.25, label = "First-Order")
 
 plt.xticks(xs)
 
