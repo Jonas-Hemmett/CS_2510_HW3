@@ -41,12 +41,14 @@ for x in xs:
         if distinctCount[1][d] == x:
             count += 1
     ys1.append(count)
-
+    
+    count = 0
     for d in distinctCount[2]:
         if distinctCount[2][d] == x:
             count += 1
     ys2.append(count)
 
+    count = 0
     for d in distinctCount[3]:
         if distinctCount[3][d] == x:
             count += 1
@@ -59,6 +61,11 @@ plt.bar([x - 0.25 for x in xs], ys1, width = 0.25, label = "First-Order")
 
 plt.xticks(xs)
 
+print(len(distinctCount[1]))
+
+print(sum(ys1))
+print(sum(ys2))
+print(sum(ys3))
 plt.legend()
 plt.ylabel('#n')  # always label axes!
 plt.xlabel('n')
